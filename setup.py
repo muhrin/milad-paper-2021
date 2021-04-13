@@ -21,7 +21,7 @@ setup(
     ],
     keywords='machine learning, atomic descriptor, moment invariants',
     install_requires=[
-        'milad', 'plotly', 'plotly-orca', 'schnetpack'
+        'milad', 'plotly', 'schnetpack'
     ],
     include_package_data=True,
 )
