@@ -1,0 +1,8 @@
+# Licenses
+include CC-BY
+include MIT
+
+# Include readme manually (because it has md extension)
+include README.rst
+
+include notebooks/*

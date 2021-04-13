@@ -1,0 +1,15 @@
+name: milad
+channels:
+  - pytorch
+  - plotly
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.5=h7579374_1
+  - pytorch
+  - numpy
+  - pandas
+  - plotly
+  - schnetpack
+  - pip:
+      - milad
