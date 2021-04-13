@@ -7,9 +7,13 @@ channels:
 dependencies:
   - python=3.8.5=h7579374_1
   - pytorch
+  - nglview
   - numpy
   - pandas
   - plotly
+  - plotly-orca
+  - povray
+  - rdkit
   - schnetpack
   - pip:
       - milad

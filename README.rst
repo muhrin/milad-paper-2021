@@ -5,7 +5,8 @@ milad-paper-2021
  :target: https://mybinder.org/v2/gh/muhrin/milad-paper-2021/HEAD
 
 Accompaniment repository to the MILAD paper.
-
+This repository contains notebooks that can be used to reproduce results from the MILAD paper.
+They can be used as examples of how to use the code, however, they are somewhat heavyweight and not ideal for a casual introduction to the code.
 
 License
 -------
