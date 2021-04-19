@@ -58,13 +58,12 @@ def create_povray_img(
             }
 
         # Extra kwargs only available for povray (All units in angstrom)
-        kwargs.update({
-            'run_povray'   : True, # Run povray or just write .pov + .ini files
+        kwargs['povray_settings'] = {
             'display'      : False,# Display while rendering
             'pause'        : True, # Pause when done rendering (only if display)
             'transparent'  : True,# Transparent background
             'canvas_width' : 1024, # Width of canvas in pixels
-            'canvas_height': None, # Height of canvas in pixels 
+            'canvas_height': None, # Height of canvas in pixels
             'camera_dist'  : 50.,  # Distance from camera to front atom
             'image_plane'  : None, # Distance from front atom to image plane
             'camera_type'  : 'perspective', # perspective, ultra_wide_angle
@@ -75,7 +74,7 @@ def create_povray_img(
             'background'   : 'White',        # color
             'textures'     : None, # Length of atoms list of texture names
             'celllinewidth': 0.1,  # Radius of the cylinders representing the cell
-            })
+            }
         kwargs.update(overrides)
 
         # Write the .pov (and .ini) file. If run_povray=False, you must run command

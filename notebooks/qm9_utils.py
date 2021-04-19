@@ -51,3 +51,10 @@ def load_test_set() -> dict:
         test_set = json.load(subset)
     
     return {int(key): value for key, value in test_set.items()}
+
+
+def get_best_reconstruction(idx, dataset):
+    # Get the row with the minimum RMSD for that index
+    attempts = dataset.loc[dataset['QM9 ID'] == idx]
+    min_rmsd = attempts['RMSD'].min()
+    return attempts.loc[attempts['RMSD'] == min_rmsd]
