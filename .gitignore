@@ -71,7 +71,6 @@ target/
 
 # TeX stuff
 *.aux
-*.pdf
 
 # Don't include QM9 data in the repo
 qm9.db

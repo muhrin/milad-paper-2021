@@ -1,12 +1,22 @@
-milad-paper-2021
-================
+MILAD paper accompaniment
+=========================
 
 .. image:: https://mybinder.org/badge_logo.svg
  :target: https://mybinder.org/v2/gh/muhrin/milad-paper-2021/HEAD
 
-Accompaniment repository to the MILAD paper.
-This repository contains notebooks that can be used to reproduce results from the MILAD paper.
+.. image:: img/milad_logo.svg
+   :height: 256px
+   :alt: MILAD logo
+
+
+.. image:: img/encode_decode.png
+   :alt: The rotationally invariant encoding and decoding of a molecule
+
+This is the accompaniment repository to the MILAD paper: `arxiv.org/abs/2104.09319 <https://arxiv.org/abs/2104.09319>`_.
+
+This repository contains notebooks that can be used to reproduce all results from the paper.
 They can be used as examples of how to use the code, however, they are somewhat heavyweight and not ideal for a casual introduction to the code.
+To try try the code on binder just click 'launch' above.
 
 License
 -------
