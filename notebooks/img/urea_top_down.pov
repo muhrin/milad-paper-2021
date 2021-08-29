@@ -4,13 +4,15 @@
 global_settings {assumed_gamma 1 max_trace_level 6}
 background {color White transmit 1.0}
 camera {perspective
-  right -4.60*x up 3.68*y
+  right -4.27*x up 3.17*y
   direction 50.00*z
   location <0,0,50.00> look_at <0,0,0>}
+
+
 light_source {<  2.00,   3.00,  40.00> color White
   area_light <0.70, 0, 0>, <0, 0.70, 0>, 3, 3
   adaptive 1 jitter}
-
+// no fog
 #declare simple = finish {phong 0.7}
 #declare pale = finish {ambient 0.5 diffuse 0.85 roughness 0.001 specular 0.200 }
 #declare intermediate = finish {ambient 0.3 diffuse 0.6 specular 0.1 roughness 0.04}
@@ -28,15 +30,18 @@ light_source {<  2.00,   3.00,  40.00> color White
 #end
 #macro constrain(LOC, R, COL, TRANS FIN)
 union{torus{R, Rcell rotate 45*z texture{pigment{color COL transmit TRANS} finish{FIN}}}
-      torus{R, Rcell rotate -45*z texture{pigment{color COL transmit TRANS} finish{FIN}}}
-      translate LOC}
+     torus{R, Rcell rotate -45*z texture{pigment{color COL transmit TRANS} finish{FIN}}}
+     translate LOC}
 #end
 
-atom(<  1.18,  -1.57,   0.00>, 0.19, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #0 
-atom(<  1.15,  -0.62,  -0.36>, 0.43, rgb <0.19, 0.31, 0.97>, 0.0, ase3) // #1 
-atom(<  2.00,  -0.10,  -0.21>, 0.19, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #2 
-atom(<  0.00,   0.12,  -0.19>, 0.46, rgb <0.56, 0.56, 0.56>, 0.0, ase3) // #3 
-atom(<  0.00,   1.36,  -0.19>, 0.40, rgb <1.00, 0.05, 0.05>, 0.0, ase3) // #4 
-atom(< -1.15,  -0.62,  -0.02>, 0.43, rgb <0.19, 0.31, 0.97>, 0.0, ase3) // #5 
-atom(< -2.00,  -0.10,  -0.17>, 0.19, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #6 
-atom(< -1.18,  -1.56,  -0.38>, 0.19, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #7 
+// no cell vertices
+atom(<  1.18,  -1.48,   0.00>, 0.03, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #0
+atom(<  1.15,  -0.53,  -0.36>, 0.07, rgb <0.19, 0.31, 0.97>, 0.0, ase3) // #1
+atom(<  2.00,  -0.01,  -0.21>, 0.03, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #2
+atom(<  0.00,   0.21,  -0.19>, 0.08, rgb <0.56, 0.56, 0.56>, 0.0, ase3) // #3
+atom(<  0.00,   1.44,  -0.19>, 0.07, rgb <1.00, 0.05, 0.05>, 0.0, ase3) // #4
+atom(< -1.15,  -0.53,  -0.02>, 0.07, rgb <0.19, 0.31, 0.97>, 0.0, ase3) // #5
+atom(< -2.00,  -0.01,  -0.17>, 0.03, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #6
+atom(< -1.18,  -1.48,  -0.38>, 0.03, rgb <1.00, 1.00, 1.00>, 0.0, ase3) // #7
+
+// no constraints

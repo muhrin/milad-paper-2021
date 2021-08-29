@@ -12,6 +12,7 @@ dependencies:
   - pandas
   - plotly
   - plotly-orca
+  - pymatgen==2022.0.12
   - povray
   - rdkit
   - schnetpack

@@ -41,6 +41,7 @@ def create_povray_img(
     x=None,
     y=None,
     z=None,
+    povray_settings=None,
     **overrides,
     ):
         x = x or 0.
@@ -56,7 +57,7 @@ def create_povray_img(
             'colors'        : None,# List: one (r, g, b) tuple per atom
             'show_unit_cell': 2,   # 0, 1, or 2 to not show, show, and show all of cell
             }
-
+        kwargs.update(overrides)
         # Extra kwargs only available for povray (All units in angstrom)
         kwargs['povray_settings'] = {
             'display'      : False,# Display while rendering
@@ -75,7 +76,8 @@ def create_povray_img(
             'textures'     : None, # Length of atoms list of texture names
             'celllinewidth': 0.1,  # Radius of the cylinders representing the cell
             }
-        kwargs.update(overrides)
+        if povray_settings is not None:
+            kwargs['povray_settings'].update(povray_settings)
 
         # Write the .pov (and .ini) file. If run_povray=False, you must run command
         # `povray filename.ini` to convert .pov file to .png

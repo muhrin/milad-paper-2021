@@ -21,7 +21,7 @@ setup(
     ],
     keywords='machine learning, atomic descriptor, moment invariants',
     install_requires=[
-        'milad', 'pandas', 'plotly', 'schnetpack'
+        'milad==0.3.0', 'pandas', 'plotly', 'schnetpack', 'ase==3.22.0', 'pymatgen==2022.0.12',
     ],
     include_package_data=True,
 )
